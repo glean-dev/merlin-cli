@@ -4,14 +4,8 @@ FROM node:lts-alpine
 RUN mkdir app
 RUN chown -R node:node app
 
-
 # Prepare the environment to install esy.
-RUN apk add --no-cache \
-		ca-certificates wget \
-		bash curl perl-utils \
-		git patch gcc g++ musl-dev make m4
-
-RUN apk --no-cache add ca-certificates wget
+RUN apk add --no-cache ca-certificates wget bash curl perl-utils git patch gcc g++ musl-dev make m4 shadow
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub
 RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk
 RUN apk add glibc-2.29-r0.apk
@@ -39,4 +33,4 @@ COPY build.sh build.sh
 RUN bash build.sh
 
 VOLUME /build
-CMD sh -i
+CMD bash -i
