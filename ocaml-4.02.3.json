@@ -1,10 +1,7 @@
 {
   "name": "@glean-dev/merlin-cli",
-  "version": "3.3.3",
+  "version": "0.0.1",
   "preferGlobal": false,
-  "description": "Globally Installable CLI Tools For ReasonML",
-  "main": "index.js",
-  "notes": "Do not include a postinstall script - it will be added for you",
   "scripts": {
     "test": "bash ./test.sh"
   },

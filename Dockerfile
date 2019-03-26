@@ -30,12 +30,13 @@ COPY ocaml-4.02.3.json ocaml-4.02.3.json
 COPY ocaml-4.02.3.esy.lock ocaml-4.02.3.esy.lock
 COPY ocaml-4.02.3._esyinstall ocaml-4.02.3._esyinstall
 
-RUN esy @ocaml-4.02.3 install --cache-tarballs-path=./ocaml-4.02.3._esyinstall
-RUN esy @ocaml-4.02.3 build
-RUN esy @ocaml-4.02.3 release
+COPY ocaml-4.07.1.json ocaml-4.07.1.json
+COPY ocaml-4.07.1.esy.lock ocaml-4.07.1.esy.lock
+COPY ocaml-4.07.1._esyinstall ocaml-4.07.1._esyinstall
 
-RUN mkdir ocaml-4.02.3
-RUN ls _release/_export/*.tar.gz | xargs -i tar xzf {} -C ocaml-4.02.3 --strip-components=1
+COPY build.sh build.sh
+
+RUN bash build.sh
 
 VOLUME /build
 CMD sh -i

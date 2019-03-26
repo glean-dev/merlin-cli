@@ -1,0 +1,42 @@
+{
+  "name": "@glean-dev/merlin-cli",
+  "version": "0.0.1",
+  "preferGlobal": false,
+  "scripts": {
+    "test": "bash ./test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glean-dev/merlin-cli.git"
+  },
+  "author": "Ozan Sener",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glean-dev/merlin-cli/issues"
+  },
+  "esy": {
+    "release": {
+      "bin": [],
+      "includePackages": ["@opam/merlin", "@opam/merlin-lsp", "@opam/reason"],
+      "rewritePrefix": true
+    }
+  },
+  "homepage": "https://github.com/glean-dev/merlin-cli#readme",
+  "dependencies": {
+    "@opam/merlin": "*",
+    "@opam/merlin-lsp": "*",
+    "@opam/ppx_deriving": "*",
+    "@opam/ppx_deriving_yojson": "*",
+    "@opam/ppxfind": "*",
+    "@opam/reason": "*",
+    "ocaml": "~4.7.1004"
+  },
+  "resolutions": {
+    "@opam/merlin": "glean-dev/merlin:merlin.opam#68dbf9db472e74abc08cd4b390926a5d2ccf083f",
+    "@opam/merlin-lsp": "glean-dev/merlin:merlin-lsp.opam#68dbf9db472e74abc08cd4b390926a5d2ccf083f",
+    "@opam/ppx_deriving": "ocaml-ppx/ppx_deriving:ppx_deriving.opam#f1857c2231280b1cb7fd682d57255a64319bb717",
+    "@opam/ppx_deriving_yojson": "ocaml-ppx/ppx_deriving_yojson:ppx_deriving_yojson.opam#8ce87acb20c29d7b6dbeaf85eb32ce5f7dc252a5",
+    "@opam/ppxfind": "diml/ppxfind:ppxfind.opam#d294b1c40937f0b3e08f462a52d5a3a8864455b4",
+    "@opam/reason": "glean-dev/reason:reason.opam#f965587255864e55071d9f5f80f0cd1e6ed7d88a"
+  }
+}
