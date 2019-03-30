@@ -10,3 +10,19 @@ linux_build_and_publish_task:
   build_script: ./build.sh $OCAML_VERSION
   binaries_artifacts:
     path: "*.tgz"
+
+mac_build_and_publish_task:
+  osx_instance:
+    image: mojave-base
+  env:
+    matrix:
+      OCAML_VERSION: 4.02.3
+      OCAML_VERSION: 4.04.2
+      OCAML_VERSION: 4.06.1
+      OCAML_VERSION: 4.07.1
+  prepare_script:
+    - brew install curl gpatch node git
+    - npm i -g esy@latest
+  build_script: ./build.sh $OCAML_VERSION
+  binaries_artifacts:
+    path: "*.tgz"
