@@ -1,7 +1,0 @@
-pool:
-  vmImage: 'ubuntu-16.04'
-
-container: osener/glean:merlin-cli
-
-steps:
-- script: printenv
