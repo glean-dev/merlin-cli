@@ -1,0 +1,15 @@
+{
+  "source": "./common.old.darwin.json",
+  "esy": {
+    "release": {
+      "bin": [],
+      "includePackages": ["@opam/merlin", "@opam/merlin-lsp", "@opam/reason"],
+      "rewritePrefix": true
+    }
+  },
+  "override": {
+    "devDependencies": {
+      "ocaml": "~4.4.2004"
+    }
+  }
+}

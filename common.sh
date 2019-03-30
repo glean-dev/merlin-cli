@@ -3,10 +3,6 @@
 set -Eeuo pipefail
 trap "echo ERR trap fired!" ERR
 
-OCAML_VERSION=$1
-OCAML="ocaml-$OCAML_VERSION"
-MANIFEST="$OCAML/package.json"
-
 PLATFORM=''
 
 case "$OSTYPE" in
@@ -15,4 +11,7 @@ case "$OSTYPE" in
   *)        echo "unknown: $OSTYPE"; exit 1 ;;
 esac
 
+OCAML_VERSION=$1
+OCAML="ocaml-$OCAML_VERSION.$PLATFORM"
+MANIFEST="$OCAML/package.json"
 
