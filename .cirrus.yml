@@ -1,3 +1,6 @@
+env:
+  NPM_TOKEN: ENCRYPTED[bff12fafd99423fb6c275d2385d25845549d7285b66525df3107ae23a816f39254d77705f0cac21a151334b9e9b67c6a]
+
 linux_build_and_publish_task:
   container:
     dockerfile: Dockerfile
@@ -8,6 +11,7 @@ linux_build_and_publish_task:
       OCAML_VERSION: 4.06.1
       OCAML_VERSION: 4.07.1
   build_script: ./build.sh $OCAML_VERSION
+  publish_script: ./publish.sh $OCAML_VERSION
   binaries_artifacts:
     path: "*.tgz"
 
