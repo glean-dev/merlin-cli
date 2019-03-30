@@ -14,7 +14,12 @@ ls _release/_export/*.tar.gz | xargs -i tar xzf {} -C $OCAML --strip-components=
 rm -rf _release
 
 cp package.json $MANIFEST
-sed -i "s/%%OCAML_VERSION%%/$OCAML_VERSION/g" $MANIFEST
-sed -i "s/%%PLATFORM%%/$PLATFORM/g" $MANIFEST
+if [ "$PLATFORM" == "darwin" ]; then
+  sed -i '' "s/%%OCAML_VERSION%%/$OCAML_VERSION/g" $MANIFEST
+  sed -i '' "s/%%PLATFORM%%/$PLATFORM/g" $MANIFEST
+else
+  sed -i "s/%%OCAML_VERSION%%/$OCAML_VERSION/g" $MANIFEST
+  sed -i "s/%%PLATFORM%%/$PLATFORM/g" $MANIFEST
+fi
 
 cd $OCAML && npm pack && mv *.tgz ..
