@@ -2,7 +2,9 @@ linux_build_task:
   container:
     dockerfile: Dockerfile
   env:
-    OCAML_VERSION: 4.02.3
+    matrix:
+      OCAML_VERSION: 4.02.3
+      OCAML_VERSION: 4.07.1
   build_script: ./build.sh $OCAML_VERSION
   binaries_artifacts:
     path: "*.tgz"
