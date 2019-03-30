@@ -2,7 +2,7 @@
   "name": "@glean-dev/merlin-cli-%%OCAML_VERSION%%",
   "version": "0.0.1-%%PLATFORM%%",
   "description": "Prebuilt binaries for merlin-lsp",
-  "files": ["bin/*"],
+  "files": ["bin/ocamlmerlin-lsp*", "bin/ocamlmerlin-reason*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/glean-dev/merlin-cli.git"
