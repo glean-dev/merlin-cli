@@ -15,3 +15,4 @@ OCAML_VERSION=$1
 OCAML="ocaml-$OCAML_VERSION.$PLATFORM"
 MANIFEST="$OCAML/package.json"
 
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:$PATH

@@ -21,7 +21,7 @@ mac_build_and_publish_task:
       OCAML_VERSION: 4.06.1
       OCAML_VERSION: 4.07.1
   prepare_script:
-    - brew install curl gpatch node git
+    - brew install curl gpatch node git coreutils findutils
     - npm i -g esy@latest
   build_script: ./build.sh $OCAML_VERSION
   binaries_artifacts:
