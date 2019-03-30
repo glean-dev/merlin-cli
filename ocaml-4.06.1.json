@@ -1,0 +1,8 @@
+{
+  "source": "./common.json",
+  "override": {
+    "devDependencies": {
+      "ocaml": "~4.6.10"
+    }
+  }
+}
