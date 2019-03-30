@@ -2,9 +2,6 @@
   "name": "@glean-dev/merlin-cli",
   "version": "0.0.1",
   "preferGlobal": false,
-  "scripts": {
-    "test": "bash ./test.sh"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/glean-dev/merlin-cli.git"
@@ -13,13 +10,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/glean-dev/merlin-cli/issues"
-  },
-  "esy": {
-    "release": {
-      "bin": [],
-      "includePackages": ["@opam/merlin", "@opam/merlin-lsp", "@opam/reason"],
-      "rewritePrefix": true
-    }
   },
   "homepage": "https://github.com/glean-dev/merlin-cli#readme",
   "dependencies": {

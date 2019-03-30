@@ -4,5 +4,12 @@
     "devDependencies": {
       "ocaml": "~4.6.10"
     }
+  },
+  "esy": {
+    "release": {
+      "bin": [],
+      "includePackages": ["@opam/merlin", "@opam/merlin-lsp", "@opam/reason"],
+      "rewritePrefix": true
+    }
   }
 }
