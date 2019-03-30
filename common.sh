@@ -5,6 +5,7 @@ trap "echo ERR trap fired!" ERR
 
 OCAML_VERSION=$1
 OCAML="ocaml-$OCAML_VERSION"
+MANIFEST="$OCAML/package.json"
 
 PLATFORM=''
 
